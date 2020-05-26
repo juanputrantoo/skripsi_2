@@ -1,0 +1,329 @@
+@font-face{
+    font-family: 'Monstserrat-Alternates';
+    src: url('../font/MontserratAlternates-Light.ttf');
+}
+@font-face{
+    font-family: 'Monstserrat-Regular';
+    src: url('../font/Montserrat-Regular.ttf');
+}
+
+body{
+    overflow-x: hidden!important;
+}
+
+/* NAVBAR */
+
+/* .navbar{
+    font-family: 'Monstserrat-Alternates';
+    padding: 30px;
+    background-color: transparent;
+    transition: .3s;
+}
+.navbar.scrolled{
+    background-color: #3c6382;
+    padding: 8px;
+} */
+
+.navbar{
+    font-family: 'Monstserrat-Alternates';
+    padding: 8px;
+    background-color: #2c3e50;
+    padding: 8px;
+}
+
+
+.navbar img{
+    width: 100px;
+    padding: 0;
+    margin-right: 20px;
+}
+
+.navbar a{
+    color: aliceblue;
+    transition: .3s;
+}
+
+/* .navbar.scrolled a{
+    color: aliceblue;
+    transition: .3s;
+} */
+
+.navbar li{
+    margin-right: 5px;
+}
+
+/* .navbar li.active > a, .navbar.scrolled li.active > a{
+    background-color: #2C3A47;
+    border-radius: 5px;
+}
+
+.navbar li > a:hover, .navbar.scrolled li > a:hover{
+    color: aliceblue;
+    background-color: #2C3A47;
+    border-radius: 5px;
+} */
+
+/* underline */
+.navbar li a{
+    position: relative;
+    text-decoration: none;
+  }
+.navbar li a::before{
+    content: '';
+    position: relative;
+    width: 50px;
+    height: 1px;
+    display: flex;
+    margin: 0 auto;
+    top: 30px;
+    background-color: aliceblue;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+  
+.navbar li a:hover::before, .navbar li a:focus::before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+.navbar li.active > a::before, .navbar li.active > a::before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+nav .navbar-toggler{
+    border: 1px solid aliceblue;
+}
+nav span.navbar-toggler.icon{
+    color: aliceblue!important;
+}
+
+nav .notification-navbar{
+    position: absolute;
+    color: #ff6b6b;
+    font-size: 22px;
+    transform: rotate(30deg);
+    right: 0px;
+    animation: wiggle 1s infinite;
+}
+
+@keyframes wiggle {
+    0% { transform: rotate(0); }
+  15% { transform: rotate(5deg); }
+  30% { transform: rotate(-5deg); }
+  45% { transform: rotate(4deg); }
+  60% { transform: rotate(-4deg); }
+  75% { transform: rotate(2deg); }
+  85% { transform: rotate(-2deg); }
+  92% { transform: rotate(1deg); }
+  100% { transform: rotate(0); }
+  }
+
+
+nav .notification{
+    display: inline-block;
+    background-color: #ee5253;
+    color: white;
+    border-radius: 50%;
+    width: 23px;
+    height: 23px;
+}
+
+/* CONTENT */
+.content{
+    font-family: 'Monstserrat-Regular';
+    margin-top: 67px;
+}
+section{
+    margin-bottom: 50px;
+}
+
+
+/* ------PEMBERI KERJA------- */
+.cari-pekerja{
+    margin-top: 80px;
+}
+
+.cari-pekerja .btn-search{
+    color: aliceblue;
+    background-color: #2c3e50;
+}
+
+.baris-pekerja{
+    height: 200px;
+}
+
+.baris-pekerja .judul{
+    color: #2c3e50;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.image-pekerja{
+    width:  50px;
+    height: 50px;
+}
+
+.baris-pekerja p{
+    display: block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    word-wrap: break-word;
+    overflow: hidden;
+    max-height: 100px;
+    /* line-height: 1.8em; */
+}
+
+.baris-pekerja button{
+    color: aliceblue;
+    background-color: #e58e26;
+    border: none;
+}
+
+.baris-pekerja button:hover{
+    color: aliceblue;
+    background-color: #2c3e50;
+    border: none;
+}
+
+.sidebar-detail{
+    position: absolute;
+    width: 100%;
+    margin-top: 0px;
+}
+
+.sidebar-detail .list-group .active{
+    background-color: #ff9f43;
+    border: none;
+}
+
+.sidebar-detail .btn-tawarkan{
+    background-color: #ff9f43;
+    color: aliceblue;
+}
+
+.sidebar-detail .btn-tawarkan:hover{
+    background-color: #e58e26;
+    color: white;
+}
+
+.sidebar-detail .image-detail-pekerja{
+    width:  100px;
+    height: 100px;
+    padding: 10px;
+}
+
+
+.detail-pekerja{
+    /* margin-top: 80px; */
+    width: 40%;
+    margin: 0 auto!important;
+}
+
+.detail-overview, .detail-portofolio, .detail-pengalaman, .detail-komentar{
+    margin-top: 80px;
+}
+
+.detail-overview .overview-textarea{
+    width: 100%;
+    border: none;
+    overflow: auto;
+    background-color: transparent;
+    height: 300px;
+    display: block;
+    resize: none;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.detail-card h5.sub-judul{
+    color: #e58e26;
+    margin-bottom: 20px;
+    margin-top: 15px;
+}
+
+.detail-portofolio .image-porto{
+    width: 40%;
+    padding: 10px;
+}
+
+
+.profile{
+    padding: 10px;
+}
+
+.profile input:read-only{
+    background-color: white;
+    border: none;
+    border-bottom: 1px solid #7f8c8d;
+    border-radius: 0;
+}
+
+.profile .card-header{
+    color: #2c3e50;
+}
+
+.profile .card-header .btn{
+    background-color: #ff9f43;
+    color: white;
+}
+
+.profile .card-header .btn:hover{
+    background-color: #e58e26;
+    color: white;
+}
+
+.profile .image-profile{
+    border: 3px solid #ff9f43;
+    height: 200px;
+    width: 200px;
+    padding: 5px;
+}
+
+.profile .icon{
+    color: #2c3e50;
+    font-size: 30px;
+}
+
+.profile input.submit{
+    background-color: #ff9f43;
+    color: white;
+}
+
+.profile input.submit:hover{
+    background-color: #e58e26;
+    color: white;
+}
+
+
+.btn-orange{
+    background-color: #ff9f43;
+    color: white;
+}
+
+.btn-orange:hover{
+    background-color: #e58e26;
+    color: white;
+}
+
+.penawaran .sub-judul{
+    background-color: #2c3e50;
+    color: aliceblue;
+    margin-bottom: 15px;
+    padding: 15px;
+    width: 350px;
+    display: flex;
+    justify-content: center;
+}
+
+.penawaran input:read-only{
+    background-color: white;
+    border: none;
+    border-bottom: 1px solid #7f8c8d;
+    border-radius: 0;
+}

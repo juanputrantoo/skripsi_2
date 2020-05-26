@@ -1,0 +1,680 @@
+@font-face{
+    font-family: 'Monstserrat-Alternates';
+    src: url('../font/MontserratAlternates-Light.ttf');
+}
+@font-face{
+    font-family: 'Monstserrat-Regular';
+    src: url('../font/Montserrat-Regular.ttf');
+}
+
+body{
+    overflow-x: hidden!important;
+}
+
+/* NAVBAR */
+
+/* .navbar{
+    font-family: 'Monstserrat-Alternates';
+    padding: 30px;
+    background-color: transparent;
+    transition: .3s;
+}
+.navbar.scrolled{
+    background-color: #3c6382;
+    padding: 8px;
+} */
+
+.navbar{
+    font-family: 'Monstserrat-Alternates';
+    padding: 8px;
+    background-color: #3c6382;
+    padding: 8px;
+}
+
+
+.navbar img{
+    width: 100px;
+    padding: 0;
+    margin-right: 20px;
+}
+
+.navbar a{
+    color: aliceblue;
+    transition: .3s;
+}
+
+/* .navbar.scrolled a{
+    color: aliceblue;
+    transition: .3s;
+} */
+
+.navbar li{
+    margin-right: 5px;
+}
+
+/* .navbar li.active > a, .navbar.scrolled li.active > a{
+    background-color: #2C3A47;
+    border-radius: 5px;
+}
+
+.navbar li > a:hover, .navbar.scrolled li > a:hover{
+    color: aliceblue;
+    background-color: #2C3A47;
+    border-radius: 5px;
+} */
+
+/* underline */
+.navbar li a{
+    position: relative;
+    text-decoration: none;
+  }
+.navbar li a::before{
+    content: '';
+    position: relative;
+    width: 50px;
+    height: 1px;
+    display: flex;
+    margin: 0 auto;
+    top: 30px;
+    background-color: aliceblue;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+  
+.navbar li a:hover::before, .navbar li a:focus::before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+.navbar li.active > a::before, .navbar li.active > a::before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+
+  
+
+
+
+nav .navbar-toggler{
+    border: 1px solid aliceblue;
+}
+nav span.navbar-toggler.icon{
+    color: aliceblue!important;
+}
+
+
+
+
+
+
+/* CONTENT */
+.content{
+    font-family: 'Monstserrat-Regular';
+    margin-top: 67px;
+}
+section{
+    margin-bottom: 50px;
+}
+
+
+
+
+/* HOME */
+.alert-sukses{
+    position: absolute;
+    background-color: #55efc4;
+    z-index: 1000;
+    border: 1px solid #00b894;
+    border-radius: 10px;
+    text-align: center;
+    left: 30%;
+}
+.alert-sukses p{
+    margin-bottom: 0;
+    padding: 20px;
+    color: #27ae60;
+}
+
+
+.judul{
+    text-align: center;
+    margin: 50px;
+}
+.judul::after{
+    margin: 0 auto;
+    background: none repeat scroll 0 0 #f5cd79;
+    bottom: -10px;
+    content: "";
+    display: block;
+    height: 5px;
+    position: relative;
+    width: 100px;
+}
+
+/* HOME-LANGKAH */
+.langkah{
+    margin: 20px;
+}
+
+.langkah .card{
+    border: none;
+    text-align: center;
+    margin: 0 auto;
+    transition: all .2s ease-in-out;
+}
+.langkah .card:hover{
+    transform: scale(1.03);
+}
+
+.langkah .icon-langkah svg{
+    margin-top: 50px;
+}
+
+.langkah .icon-langkah{
+    color: #54a0ff;
+    font-size: 150px;
+    text-align: center;
+    line-height: 150px;
+    height: 250px;
+    width: 250px;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    border-radius:50% 50% 50% 0;
+    background: linear-gradient(to bottom,#EBEDEC,#E8E8E8);
+    box-shadow: 0 0 3px #909090;
+    display:block;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease-in-out;
+}
+
+.langkah .icon-langkah:before,
+.langkah .icon-langkah:after{
+    content: '';
+    height: 90%;
+    width: 90%;
+    background-color: #1e272e;
+    border-radius: 50% 50% 50% 0;
+    transform:translateX(-50%) translateY(-50%);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: -1;
+}
+.langkah .icon-langkah:after{
+    height: 80%;
+    width: 80%;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+/* HOME- */
+
+
+
+/* HOME-LOGIN */
+.card-login{
+    margin: 35px;
+    box-shadow: 5px 10px 18px #D3D3D3;
+}
+
+.card-login .carousel{
+    margin-bottom: 0;
+}
+
+.card-login .img-login{
+    background-color: #e58e26;
+    color: aliceblue;
+}
+
+.card-login .img-login .card-header{
+    background-color: transparent;
+    border-bottom: none;
+    padding: 20px;
+    text-align: center;
+}
+
+
+.card-login .img-login .card-body .carousel img{
+    width: 200px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.card-login .img-login .card-body .carousel .caption{
+    text-align: center;
+}
+
+.card-login .form-login .card-header{
+    background-color: transparent;
+    border-bottom: none;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.card-login .form-login .card-header img{
+    width: 200px;
+}
+
+.card-login .form-login .card-header::after{
+    margin: 0 auto;
+    background: none repeat scroll 0 0 #f5cd79;
+    bottom: -10px;
+    content: "";
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 100%;
+}
+
+.card-login .form-login .text-login{
+    color: #54a0ff;
+}
+
+.card-login .form-login .text-login::after{
+    margin: 0 auto;
+    background: none repeat scroll 0 0 grey;
+    bottom: -10px;
+    content: "";
+    display: block;
+    height: 1px;
+    position: relative;
+    width: 8%;
+}
+
+.card-login .form-login input{
+    border: 1px solid #54a0ff;
+}
+
+.card-login .form-login .input-group-text{
+    background-color: transparent;
+    border: 1px solid #54a0ff;
+}
+
+.card-login .form-login svg{
+    transition: .15s;
+    width: 20px;
+}
+
+.card-login .form-login svg:hover{
+    cursor: pointer;
+    color: #1e272e;
+}
+
+
+
+.card-login .form-login button{
+    width: 50%;
+}
+
+
+/* SIGN-UP */
+
+.sign-up .deskripsi{
+    text-align: center;
+}
+
+.sign-up .deskripsi .card{
+    padding: 15px;
+}
+
+.sign-up .deskripsi .card-header{
+    background-color: transparent;
+    border: none;
+}
+
+
+.sign-up .card{
+    border: none;
+}
+
+.sign-up .card-pk{
+    border-right: 1px solid #1e272e;
+    border-radius: 0;
+}
+
+.sign-up .card-pl{
+    border-left: 1px solid #1e272e;
+    border-radius: 0;
+}
+
+.sign-up .atau{
+    margin-bottom: auto;
+    margin-top: auto;
+}
+
+.sign-up .card img{
+    width: 250px;
+    margin: 0 auto;
+}
+
+.sign-up .btn{
+    background-color: #e58e26;
+    border: none;
+}
+
+/* SIGN-UP PK */
+@media only screen and (max-width: 600px) {
+    .signup-pk .card{
+        width: 100%!important;
+    }
+    .signup-pl .card{
+        width: 100%!important;
+    }
+}
+.signup-pk{
+    margin-top: 35px;
+}
+
+.signup-pk .card{
+    margin: 35px;
+    box-shadow: 5px 10px 18px #D3D3D3;
+    width: 75%;
+    margin: 0 auto;
+}
+
+.signup-pk .card-header{
+    background-color: transparent;
+    border-bottom: 2px solid #D3D3D3;
+    
+}
+
+.signup-pk .judul-signup{
+    margin: 0 auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+
+.signup-pk .card-header img{
+    width: 200px;
+    margin: 0 auto!important;
+}
+
+.signup-pk .card-body .btn{
+    width: 50%;
+}
+
+
+/* SIGNUP-PL */
+
+
+
+
+select.list-dt {
+    border: none;
+    outline: 0;
+    border-bottom: 1px solid #ccc;
+    padding: 2px 5px 3px 5px;
+    margin: 2px
+}
+
+select.list-dt:focus {
+    border-bottom: 2px solid skyblue
+}
+
+.card {
+    z-index: 0;
+    border: none;
+    border-radius: 0.5rem;
+    position: relative
+}
+
+.fs-title {
+    font-size: 25px;
+    color: #2C3E50;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-align: left
+}
+
+#progressbar {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    overflow: hidden;
+    color: lightgrey;
+    justify-content: center;
+    display: flex;
+    padding-left: 0;
+}
+
+#progressbar .active {
+    color: #000000
+}
+
+#progressbar li {
+    list-style-type: none;
+    font-size: 12px;
+    width: 100%;
+    float: left;
+    position: relative;
+}
+
+#progressbar #account:before {
+    font-family: FontAwesome;
+    content: "\f023"
+}
+
+#progressbar #personal:before {
+    font-family: FontAwesome;
+    content: "\f007"
+}
+
+#progressbar #payment:before {
+    font-family: FontAwesome;
+    content: "\f09d"
+}
+
+#progressbar #confirm:before {
+    font-family: FontAwesome;
+    content: "\f00c"
+}
+
+#progressbar li:before {
+    width: 50px;
+    height: 50px;
+    line-height: 45px;
+    display: block;
+    font-size: 18px;
+    color: transparent;
+    background: lightgray;
+    border-radius: 50%;
+    margin: 0 auto 10px auto;
+    padding: 2px
+}
+
+#progressbar li:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: lightgray;
+    position: absolute;
+    left: 0;
+    top: 25px;
+    z-index: -1;
+}
+
+#progressbar li.active:before,
+#progressbar li.active:after {
+    background: #54a0ff;
+}
+
+.radio-group {
+    position: relative;
+    margin-bottom: 25px
+}
+
+.radio {
+    display: inline-block;
+    width: 204;
+    height: 104;
+    border-radius: 0;
+    background: lightblue;
+    box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 8px 2px
+}
+
+.radio:hover {
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3)
+}
+
+.radio.selected {
+    box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.1)
+}
+
+.fit-image {
+    width: 100%;
+    object-fit: cover
+}
+
+
+.signup-pl .card{
+    margin: 35px;
+    box-shadow: 5px 10px 18px #D3D3D3;
+    width: 75%;
+    margin: 0 auto;
+}
+
+.signup-pl .card-header{
+    background-color: transparent;
+}
+
+.signup-pl .judul-signup{
+    margin: 0 auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+
+.signup-pl .card-header img{
+    width: 200px;
+    margin: 0 auto!important;
+}
+
+.signup-pl .card-body .next{
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+    background-color: #e58e26;
+    color: aliceblue;
+    border: none;
+}
+
+.signup-pl .card-body .previous{
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+    background-color: #e58e26;
+    color: aliceblue;
+    border: none;
+}
+.signup-pl .card-body .submit{
+    width: 50%;
+    display: block;
+    background-color: #e58e26;
+    color: aliceblue;
+    border: none;
+    margin-top: 10px;
+}
+
+
+/* .signup-pl .card-body .judul-biodata h5{
+} */
+
+input[type=file]{
+    margin: 20px;
+}
+
+.multiselect.dropdown-toggle.btn.btn-default{
+    border: 1px solid lightgrey;
+}
+
+
+
+
+
+/* aboutus */
+
+.judul-aboutus::after{
+    background: none repeat scroll 0 0 #f5cd79;
+    bottom: -10px;
+    content: "";
+    display: block;
+    height: 5px;
+    position: relative;
+    width: 111px;
+}
+
+.border-img-aboutus{
+    /* position: absolute; */
+    width: 300px;
+    height: 358px;
+    border: 5px solid #f5cd79;
+    display: block;
+    margin: 0 auto;
+}
+
+.image-aboutus{
+    position: absolute;
+    max-width: 50%;
+    left: 146px;
+    padding: 20px;
+    
+}
+
+/* howitworks */
+.judul-howitworks::after{
+    background: none repeat scroll 0 0 #f5cd79;
+    margin: 0 auto;
+    bottom: -10px;
+    content: "";
+    display: block;
+    height: 5px;
+    position: relative;
+    width: 150px;
+}
+
+.howitworks .nav-tabs{
+    border: none;
+}
+
+.howitworks .nav-tabs .active{
+    border-radius: 0!important;
+    border: none;
+    background-color: #dfe4ea;
+    color: #2d3436;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.howitworks .nav-tabs li a{
+    color: #2d3436;
+}
+
+.howitworks .icon-hiw{
+    font-size: 100px;
+    color: #e58e26;
+}
+
+
+
+/* .captcha{
+    background-color: lightgray;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    display: flex;
+    height: 50%;
+}
+.sub-captcha{
+    margin: 0 auto;
+    vertical-align: middle;
+} */
